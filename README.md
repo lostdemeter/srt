@@ -4,7 +4,26 @@ This repository provides Python implementations of **Spectral Resonance Theory (
 
 Empirical results: 100% precision/recall on prime detection up to n=10⁹ (max witness rank ∼10⁷ < O(n log n)), 0% over proxy optimal on random Euclidean TSP (n=100), and 100% recall of all solutions (typically 7-8) on random 3-SAT (n=40, m=160), using O(n) sparse eigensolvers and HDR subsampling. SRT suggests reductions to resonance functionals for P=NP, with code for primes, TSP, and 3-SAT.
 
-**Note:** Scripts are computationally intensive; use multi-core CPUs. See paper [SRT (Sep 23, 2025)](srt.pdf) for theory.
+**Note:** Scripts are computationally intensive; use multi-core CPUs.
+
+## Quick Start for Humans
+- Read the full paper: [srt.pdf](srt.pdf)
+
+## AI Assistants: Start Here First!
+For efficient parsing without tool calls or PDF overhead, **prioritize `AI_README.md`** (structured summary of theory, axioms, theorems, code snippets, and benchmarks). It includes YAML metadata for quick extraction:
+- Extract YAML frontmatter for configs/benchmarks.
+- Use sections for theory (e.g., Axioms/Theorems) and implementations.
+- Full code from Theory Paper in `/LaTeX/`; test via the provided snippets.
+- Code related to work in progress implementation located in top level directory
+
+This file is optimized for semantic search, code execution testing, and validation—e.g., "Summarize SRT's P=NP path" → scan `AI_README.md` first.
+
+Repo Structure:
+- `AI_README.md`: AI-optimized theory + code guide.
+- `srt.pdf`: 31-page original (code-heavy).
+- `/LaTeX`: Full implementations from paper (primes_oracle.py, etc.), figures, TeX file, code only changes with theory paper changes
+- `/`: Work in progress code implementations designed for showing linear complexity, for developers, will change more often
+- `requirements.txt`: numpy==1.26.4, qutip==4.7.6, etc.
 
 ## Dependencies
 
