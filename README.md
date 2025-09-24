@@ -68,10 +68,9 @@ python sat_n40.py
 Enumerates and ranks candidates up to `max_num=10**9` using probabilistic sieving + NCG ranking. Outputs sorted primes.
 
 **⚠️ MEMORY WARNING ⚠️**
-- For `max_num=10**9`, this requires **>64GB RAM** (or use `selection_mode='heap'` for streaming, but still heavy). **Start with 10**7** (set `max_num=10**7`) to test—runtime ~1-2 min, <4GB RAM.
-- For huge n, enable `selection_mode='heap'` (low-mem) or `'memmap'` (disk-backed).
-- Skips full ground-truth sieve for n>10**9.
-- Alternatively increase swap file size, though depending on your harddrive this may impact results
+- For `max_num=10^9`, this requires **>64GB RAM, probably closer to 128GB** (or use `selection_mode='heap'` for streaming, but still heavy). **Start with 10^7** (set `max_num=10**7`) to test—runtime ~1-2 min, <4GB RAM.
+- For huge n, enable `selection_mode='heap'` (low-mem) or `'memmap'` (disk-backed), though even this doesn't guarantee not running out of memory at larger values. 
+- Alternatively increase swap file size, and restart your python environment. Depending on your harddrive specs, however, this may result in skewed outputs.
 
 **Run:**
 ```bash
@@ -83,7 +82,7 @@ python primes_oracle.py
 - File: `generated_primes.txt`: Sorted list of detected primes (one per line).
 
 **Config Notes:**
-- Tune `max_num` at top (e.g., 10**7 for quick test).
+- Tune `max_num` at top (e.g., 10^7 for quick test).
 - Uses Miller-Rabin for validation; parallel batches for speed.
-- Runtime: Seconds for 10**7; 30ish minutes for 10**9.
+- Runtime: Seconds for 10^7; 30ish minutes for 10^9. Tested on a Ryzen 9 7950x CPU
 
