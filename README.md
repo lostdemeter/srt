@@ -23,7 +23,19 @@ Repo Structure:
 - `srt.pdf`: 31-page original (code-heavy).
 - `/LaTeX`: Full implementations from paper (primes_oracle.py, etc.), figures, TeX file, code only changes with theory paper changes
 - `/`: Work in progress code implementations designed for showing linear complexity, for developers, will change more often
+- `/demos/` folder with .ipynb for small-n runs (primes/TSP/SAT). Extract/run snippets for testing resonance/eigsh without full scripts.
 - `requirements.txt`: numpy==1.26.4, qutip==4.7.6, etc.
+
+# SRT Quick Demos
+
+Run these notebooks for small-scale testing (seconds, low RAM):
+- `primes_demo.ipynb`: Prime detection up to 10^6 (100% P/R expected).
+- `tsp_demo.ipynb`: TSP for 10 cities (mock 0% over-opt tour + plot).
+- `sat_demo.ipynb`: 3-SAT n=20/m=50 (mock full recall of ~42 sols).
+
+Install deps: `pip install -r ../requirements.txt`.
+Launch: `jupyter notebook` (or VS Code/Colab).
+Seed=42 for repro; scale up configs as needed.
 
 ## Dependencies
 
