@@ -22,7 +22,8 @@ Repo Structure:
 - `AI_README.md`: AI-optimized theory + code guide.
 - `srt.pdf`: 31-page original (code-heavy).
 - `/LaTeX`: Full implementations from paper (primes_oracle.py, etc.), figures, TeX file, code only changes with theory paper changes
-- `/`: Work in progress code implementations designed for showing linear complexity, for developers, will change more often
+- `/wip/`: Work in progress code implementations, for developers, will change more often
+- `/`: Current public facing iteration of self contained files for running and demonstration.
 - `/demos/` folder with .ipynb for small-n runs (primes/TSP/SAT). Extract/run snippets for testing resonance/eigsh without full scripts.
 - `requirements.txt`: numpy==1.26.4, qutip==4.7.6, etc.
 
